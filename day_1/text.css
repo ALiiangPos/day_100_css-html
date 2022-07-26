@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none; 
+    list-style: none; 
+}
+
+body{
+    background-color:aquamarine;
+    /* height: 90vh;  */
+    /* 
+        vh:当前屏幕可见高度的百分比，和div中内容多少无关
+        height:100%：如果div中内容为空的时候，此时高度是0。但是有多行内容的时候使用两种方式都一样
+        display 属性规定元素应该生成的框的类型。
+        flex 为伸缩盒 ， 用来为盒状模型提供最大的灵活性,
+        设为 Flex 布局以后， ⼦元素的 float、clear 和 vertical-align 属性将失效。
+        justify-content是水平布局，与之对应的是垂直布局align-item。 适用于 flex container.
+
+     */
+    display: block; 
+    /* align-items: center;         
+    justify-content: center; */
+    width: 100%;
+}
+
+.main{
+    height: 100%;
+}
+.header , .nav, .container , .footer {
+    /* float，css的一种属性，多用于网页排版
+    主要属性值为： left（左浮动）、none（不浮动）、
+                  right（右浮动）、inherit（继承父元素浮动） */
+    float: left; 
+    width: 100%;
+}
+.header{
+    background-color:bisque;
+    padding: 20px; 
+    text-align: center;
+    height:100px;
+}
+.nav{
+    background-color: azure;
+    height:50px;
+}
+.nav a {
+    color:black;
+    padding: 10px  20px; 
+    display: inline-block;
+}
+.nav a:hover{
+    background-color: grey;
+    color :black;
+}
+.container{
+    background-color:black;
+    padding: 20px; 
+    text-align: center;
+    height: 700px;
+}
+.footer {
+    background-color:gray;
+    padding: 20px; 
+    text-align: center;
+    height: 20%;
+}
+.footer p {
+    font-size: 15px; 
+    color: black;
+    font-style:normal ;
+}
+.btn{
+    width: 60px; 
+    height: 20px;
+    margin:0 auto;
+}
+button{
+    background-color:blue;
+    color:ivory;
+    padding: 0.7em;
+    display: block; 
+    align-items: center;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+button span{
+    display: block; 
+    margin-left: 0.3em; 
+    transition: all 0.3s ease-in-out;
+}
+
+button svg {
+    display: block;
+    transform-origin: center center;
+    /*   
+        ease-in-out 是从头到尾都是慢的  
+    */
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover .svg-warpper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button:hover .svg {
+    transform: translateX(1.2em) ;
+}
+
+button:hover span{
+    transform: translateX(5em);
+
+}
+
+@keyframes fly-1 {
+    from{
+        transform: translateY(0.1em);
+    }
+
+    to{
+        transform: translateY(00.1em);
+    }
+}
+
+
+
+

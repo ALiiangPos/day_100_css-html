@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none; 
+    list-style: none; 
+}
+
+
+body{
+    width: 100%; 
+    background-color:darkgoldenrod; 
+    display: block;
+    /* justify-content: center;
+    align-items: center;  */
+    white-space:nowrap;
+}
+
+.header , .nav, .container , .footer {
+    /* float，css的一种属性，多用于网页排版
+    主要属性值为： left（左浮动）、none（不浮动）、
+                  right（右浮动）、inherit（继承父元素浮动） */
+    float: left; 
+    width: 100%;
+}
+
+ul{
+    display: block;
+    overflow: hidden;
+    /* 处理块元素中的空白符和换行符的，这个属性保证图片不换行 */
+    white-space:nowrap;
+    padding-left: 400px;
+    padding-top: 150px;
+    text-align: center;
+}
+li{
+    list-style: none;
+    padding: 20px;
+    font-size:10px; 
+    position: relative;
+}
+
+ul li {
+    float: left;
+    margin-right: 30px;
+}
+
+.iconfont{
+    font-size: 4em; 
+    color:aliceblue;
+}
+
+li::before{
+    top:20px;
+    height:0 ;
+    position: absolute;
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e8bc";;
+    font-size:4em ;
+    /* background-color: darkgoldenrod; */
+    border-bottom: 4px solid;
+    /*
+        overflow: 内容会被修剪，并且其余内容是不可见的。
+        当hheight = 0 时 会剪切一部分 ， 当height ！= 0 时不剪切
+    */
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+}
+
+li:nth-child(1)::before{
+    color: aqua;
+    content: "\e86f";
+}
+li:nth-child(2)::before{
+    color: cadetblue;
+    content: "\e8bc";
+}
+li:nth-child(3)::before{
+    color: darkkhaki;
+    content: "\e86f";
+}
+li:nth-child(4)::before{
+    color: darkseagreen;
+    content: "\e8a4";
+}
+
+li:hover::before{
+    height: 100%;
+    /* background-color: aqua; */
+}
+
+h1{
+    font-size: 50px;
+}
+
+
+.header{
+    height: 150px; 
+    background-color: grey;
+    color: black;
+    width: 100%;
+    text-align: center;
+    float:left;
+}
+
+
+.container{
+    background-color:darkgoldenrod; 
+    text-align: center;
+    height: 700px;  
+    display: block;
+    padding-right: 0px;
+}
