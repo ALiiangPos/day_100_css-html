@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading style</title>
+    <link rel="stylesheet" href="text.css">
+</head>
+<body>
+    <div class="container">
+        <div class="loader" >
+            <!-- viewbox中 前两个数字为左上角坐标的值 ，后两个为区域的长和宽 -->
+            <svg  viewBox="0 0 80 80"> 
+                <circle id="loader-circle" cx="40" cy="40" r="20"></circle>
+            </svg>
+        </div>
+        <div class="loader">
+            
+            <svg viewBox="0 0 80 80" >
+                <polygon id="loader-triangle" points="40 10 80 80 10 80">
+
+                </polygon>
+            </svg>
+        </div>
+    </div>
+
+</body>
+</html>

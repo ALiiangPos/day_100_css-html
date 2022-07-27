@@ -1,0 +1,111 @@
+body{
+    background-color: antiquewhite;
+    /* font-size: 20px; */
+}
+
+.loader{
+    display: inline-block;
+    width: 40px; 
+    height: 40px; 
+    position: relative;
+    text-align: center;
+}
+.loader svg{
+    fill:none ;
+    display: block; 
+    stroke: black; 
+    stroke-width: 10px; 
+    stroke-linecap: round; 
+    stroke-linejoin: round; 
+}
+
+.loader svg circle {
+    /* 
+        两个参数或者多个参数时：一个表示长度，一个表示间距
+     */
+    stroke-dasharray: 150 50 ; 
+    stroke-dashoffset: 75; 
+    /* 
+        animation（动画）:
+            animation属性结合@ keyframes使用， 
+            animation中的animation-name需要设置成@ keyframes的name一致。
+
+        transition（过渡）:
+            ease in-out 
+        transform（变形）:
+            transform(变形)属性用于内联元素和块级元素，
+            可以旋转、扭曲、缩放、移动元素，
+            它的属性值有以下五个：旋转rotate、扭曲skew、缩放scale和移动translate以及矩阵变形matrix；
+        translate（移动）:
+    */
+    transition: all 1s ease-in-out ;
+    /* 
+        cubic-bezier是控制变化的速度曲线
+     */
+    animation: pathCircle 4s cubic-bezier(0.4 , 0 , 0.2, 1) infinite;
+}
+
+
+@keyframes pathCircle {
+    25% {
+        stroke-dashoffset: 125; 
+    }
+    50% {
+        stroke-dashoffset: 175;
+    }
+    75% {
+        stroke-dashoffset: 225;
+    }
+    100% {
+        stroke-dashoffset: 275; 
+    }
+}
+
+/* .loader::before{
+    content: "";
+    width: 6px; 
+    height: 6px; 
+    border-radius: 50%; 
+    position: absolute;
+    background-color: blue;
+    top:28px;
+    left: 19px; 
+    transform: translate(-10px , -10px);
+    display: block;
+    animation: dot-Rect 3s cubic-bezier(0.4 , 0 , 0.2, 1) infinite;
+}   */
+
+@keyframes dot-Rect {
+    25% {
+        transform: translate(10px , 2px);
+    }
+    50% {
+        transform: translate(0px , 0px);
+    }
+    75% {
+        transform: translate(-10px , -10px);
+    }
+    100% {
+        transform: translate(-10px , -10px);
+    }
+}
+
+
+.loader svg polygon{
+    stroke-dasharray: 150 50; 
+    stroke-dashoffset: 0; 
+    animation: pathTriangle 4s cubic-bezier(0.4 , 0 , 0.2, 1) infinite;
+}
+/* 定义关键帧 */
+@keyframes pathTriangle {
+    
+    33%{
+        stroke-dashoffset: 80; 
+    }
+    66%{
+        stroke-dashoffset: 160; 
+    }
+    100%{
+        stroke-dashoffset: 240; 
+    }
+}
