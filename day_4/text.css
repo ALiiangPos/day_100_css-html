@@ -1,0 +1,148 @@
+*  {
+    padding: 0px; 
+    margin : 0px;
+}
+
+body {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vm;
+}   
+
+
+/*
+    top、bottom、left、right是绝对定位，必须设置position为absolute。 
+    margin一系列设置是相对定位。注意：如果用top等，而position未设置为absolute，那设置是不起作用的。
+*/
+.background {
+     position: absolute;
+     top:  0; 
+     left:  0; 
+     width: 100%;
+     height: 100%;
+     background-color: aquamarine;
+     z-index: -1;
+     transition: all 0.25s ease-in ;
+}
+
+input {
+  display: none;
+}
+
+label {
+    position: relative;
+    width: 200px; 
+    height: 100px; 
+    border-radius: 100px;
+    border : 5px  solid aqua;
+    background-color: yellowgreen;
+    transition: all 0.35s ease-in;
+}
+
+label::before {
+    content: "";
+    position: absolute;
+    top : 4px; 
+    left: 4px;
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    border: 5px solid #f5eb71;
+    background-color: #fffaa8;
+    transition: all 0.35s ease-in;
+    animation: reverse_switch 0.35s forwards ;  
+}
+
+label::after {
+    content: "";
+    position: absolute;
+    top:23px ;
+    width: 10px; 
+    left: 143px;
+    height: 10px;
+    background-color: #000;
+    box-shadow: -13px 0 0 2px  #e8e8ea ,  
+                -24px 14px 0 2px #e8e8ea ;
+    transition:  all 0.25s ease-in;
+   
+        /* 不透明度  0 为隐藏  */
+
+
+    opacity:  0  ;
+}
+
+label span {
+    position: absolute; 
+    display: block;
+    width: 10px;
+    height: 5px;
+    border-radius: 5px;
+    top:45px ;
+    left: 135px;
+    background-color: #fff;
+    transition: all 0.15s ease-in;
+}
+
+label span::before , label::after {
+    content: "" ; 
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: all 0.15s ease-in;
+}
+
+label span::before  {
+    top: - 5px; 
+    left: -20px; 
+
+}
+label span::after  {
+    top: 5px;
+    left: -10px;
+}
+
+input:checked ~ .background{
+    background-color:#808fc7;
+}
+
+input:checked + label {
+    border-color: #5d6baa;
+    background-color: #6b7abb; 
+}
+
+input:checked + label::before {
+    border-color: #e8e8ea;
+    background-color: #fff;
+    animation: switch 0.35s forwards ;
+}
+
+@keyframes switch {
+    0% {
+        left: 4px; 
+    }
+    60% {
+        left: 4px;
+        width: 112px;
+    }
+    100% {
+        left: 104px;
+    }
+}
+
+
+@keyframes reverse_switch {
+    0% {
+        left: 104px;
+    }
+    60% {
+        left: 72px;
+        width: 112px;
+    }
+    100% {
+        left: 4px;
+    }
+}
