@@ -1,0 +1,141 @@
+
+/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: 'iconfont';  
+    src: url('//at.alicdn.com/t/c/font_3547149_9kzaa0vp5xl.woff2?t=1661328489597') format('woff2'),
+        url('//at.alicdn.com/t/c/font_3547149_9kzaa0vp5xl.woff?t=1661328489597') format('woff'),
+        url('//at.alicdn.com/t/c/font_3547149_9kzaa0vp5xl.ttf?t=1661328489597') format('truetype');
+}
+
+
+  
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 20px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+:root {
+    --background-color: #F5F5F5;
+    --slider-color:#D3D3D3;
+    --text-color:#000000;
+    --tran-03: all 0.35s ease-in ;
+    --tran-02: all 0.25s ease ; 
+    --font-size: 20px;
+}
+
+
+body {
+    background-color: var(--background-color);
+    font-size: var(--font-size);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: var(--slider-color);
+    z-index: 100;
+    transform: translateX(  );
+    /* border-right: 2px solid rgba(200, 200, 200, 0.1); */
+}
+
+
+.slider .image {
+    width: 100%; 
+    height: 60px;
+}
+
+
+.slider .image img {
+    width: 80px;
+    height: 100%;
+    display: inline;
+}
+
+
+.slider .search-box {
+    border-radius: 6px;
+    background-color: #f6f5ff;
+    cursor: pointer;
+    transition: var(--tran-03);
+    height: 50px;
+
+
+}
+.slider .search-box span {
+    margin-left: 10px;
+    text-align: center;
+}
+
+.slider .search-box  input {
+    border-radius: 6px;
+    height: 100%;
+    width: 80%;
+    float: right;
+    outline:none;
+    border:none;
+    background-color: #f6f5ff;
+    color:grey;
+    font-size:17px;
+    font-weight:500;
+    transition: var(--tran-03);
+}
+
+.slider ul {
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+
+.slider ul  li   {
+    width: 100%;
+    height: 62px;
+    display: flex;
+    border-radius: 6px;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+
+.slider li a {
+    list-style: none;
+    align-items: center;
+    color: var(--text-color);
+    display: flex;
+    text-decoration: none;
+    transition: var(--tran-03);
+    background-color: transparent;
+}
+
+
+.slider li:hover {
+    background-color:chocolate;
+}
+
+
+.container {
+    padding: 15px;
+    margin:  auto;
+    max-width: 100%;
+    width: 800px;
+    display: flex;
+}
+
+
+
