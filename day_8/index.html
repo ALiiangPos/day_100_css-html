@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="text.css">
+</head>
+<body>  
+    <div class="header"></div>
+    <div class="container">
+        <div class="textArea">
+            <h1 >创建项目</h1>
+            <div id="createProject" class="alignInput">
+                <div class="trArea">
+                    <label>项目名称:</label>
+                    <input type="text" id="proName" >
+                </div>
+                <div class="trArea">
+                    <label>D:</label>
+                    <input type="text" id="D" placeholder="" >
+                </div>
+                <!-- <div class="trArea">
+
+                    </div> -->
+                <div class="trArea">
+                    <label>D1:</label>
+                    <input type="text" id="D1" >
+                </div>
+                <div class="trArea">
+                    <label>D2:</label>
+                    <input type="text" id="D2" >
+                </div>
+                <div class="trArea">
+                    <label>J:</label>
+                    <input type="text" id="J" >
+                </div>
+                <div class="trArea">
+                    <label>L:</label>
+                    <input type="text" id="L" >
+                </div>
+                <div class="trArea">
+                    <label>H:</label>
+                    <input type="text" id="H" >
+                </div>
+                <button onclick="btnCreateProject();">创建项目</button>
+            </div>
+        </div>
+        <div class="textArea" >
+            <div class="createItemArea">
+                <h1>添加入围评审项目</h1>
+                <div id="loadeProject">
+                    
+                    <div class="trArea">
+                        <label>选择项目:</label>
+                        <select id="projectSelector" title="sda" class="projectSelector">   
+                            <!-- <option value="Nan">text</option> -->
+                        </select>
+                    </div>
+    
+                    <div class="trArea">
+                        <label>估价:</label>
+                        <input type="text" id="itemNum" >
+                    </div>
+                    <div class="trArea">
+    
+                    </div>
+                    <!-- <div class="trArea">
+                        <label>D1:</label>
+                        <input type="text" id="D" >
+                    </div>
+                    <div class="trArea">    
+                        <label>D2:</label>
+                        <input type="text" id="D" >
+                    </div> -->
+    
+                    <button onclick="btnCreateItem();">创建竞标项目</button>
+                </div>
+            </div>
+            <div class="showItem">
+                <h1>入围评审项目表</h1>
+                <table id="listTable" display="block"  class="tableMenu" >
+                    <thead>
+                        <tr >
+                            <td>
+                                #
+                            </td>
+                            <td>
+                                金额大小   
+                            </td>
+                        </tr>
+                    </thead>  
+                    <tbody>
+
+                    </tbody>  
+                </table>
+            </div>
+            
+
+        </div>
+        <div class="textArea">
+            <h1 >计算评标基准价</h1>
+            <div class="caculateSUm">
+                <button onclick="calculate();" > 计算结果</button>
+            </div>  
+        </div>      
+    </div>
+    <div class="footer"></div>
+    <script src="common.js"></script>
+</body>
+</html>

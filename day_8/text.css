@@ -1,0 +1,119 @@
+* {
+    padding: 0px; 
+    font-size:16px ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.container {
+    width: 100%;
+    height: 40%;
+    font-size:20px;
+    font-weight: 500;
+}
+
+
+.textArea  {
+    display: block;
+    background-color: white ;
+    width: 33%;
+    height: 100%;
+    float:left;
+    /* align-items: center; */
+    text-align: center;
+}   
+
+
+.alignInput{
+    display: block;
+    float:left;
+    margin-left: 75px;
+}
+
+input {
+    border-radius: 6px;
+    height: 25px;
+    width: 220px;
+}
+
+
+.trArea{
+    font-weight: 500;
+    width: 100%;
+    height: 45px;
+}
+
+.createItemArea {
+    display: block;
+    width: 100%; 
+    height: 300px;
+}
+
+label {
+    position: relative;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 80px;
+}
+
+select {
+    height: 35px;;
+    width: 220px;
+}
+
+select option {
+    font-size:20px;
+}
+
+h1 {
+    position:relative;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.tableMenu  {
+    display: block;
+    margin-top: 50px;
+    text-align: center;
+    margin-left: 180px;   
+    border-spacing: 10px;
+    border: 3px solid #cbcbcb;
+    overflow-y:scroll;  
+    width: 260px;
+    height: 300px;
+    empty-cells: show;
+}
+
+.tableMenu caption {
+    color: #000;
+    font: italic 85%/1 arial,sans-serif;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.tableMenu td,.tableMenu  th {
+    border-left: 1px solid #cbcbcb;
+    border-width: 0 0 0 2px;
+    font-size: inherit;
+    margin: 0;  
+    overflow: visible;
+    padding: .5em 1em;
+}
+
+.tableMenu thead {
+    background-color: #e0e0e0;
+    color: #000;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+.tableMenu td {
+    background-color: transparent;
+}
+ 
+.tableMenu-odd td {
+    background-color: #f2f2f2;
+}
+
